@@ -23,8 +23,7 @@ from .utils import (
     restore_abs_bbox_coordinates,
     postprocess_doc2md_result,
     truncate_last_incomplete_element,
-    draw_bboxes_on_image,
-    combine_bbox_images,
+    draw_bboxes_on_image
 )
 
 __all__ = [
@@ -46,8 +45,7 @@ __all__ = [
     "save_results",
     "SUPPORTED_OUTPUT_FORMATS",
     "truncate_last_incomplete_element",
-    "draw_bboxes_on_image",
-    "combine_bbox_images",
+    "draw_bboxes_on_image"
 ]
 
 if _HAS_TORCH_UTILS:
