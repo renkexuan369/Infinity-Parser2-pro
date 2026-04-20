@@ -63,8 +63,8 @@ def resolve_prompt(task_type, custom_prompt=None):
     raise ValueError(f"Unknown task_type: {task_type}")
 
 openai_api_key = "EMPTY"
-openai_api_base = os.environ.get("infinity_parser2_pro_base")
-Authorization =  os.environ.get("infinity_parser2_pro_Authorization")
+openai_api_base = os.environ.get("INFINITY_API_BASE", "")
+Authorization =  os.environ.get("INFINITY_API_AUTH", "")
 # 绕过 SSL 证书验证（本地 CA 缺失时 HTTPS 请求会失败）
 _http_client = httpx.AsyncClient(verify=False)
 
