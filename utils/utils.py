@@ -255,22 +255,3 @@ def draw_bboxes_on_image(
     draw.text((x + margin, y + margin), size_text, fill=(255, 255, 255), font=font)
 
     return img
-
-
-def combine_bbox_images(images: list[Image.Image]) -> Image.Image | None:
-    """Vertically stack multiple bbox images into one."""
-    if not images:
-        return None
-    if len(images) == 1:
-        return images[0]
-
-    max_w = max(im.width for im in images)
-    total_h = sum(im.height for im in images)
-    combined = Image.new("RGB", (max_w, total_h), (255, 255, 255))
-
-    y = 0
-    for im in images:
-        combined.paste(im, (0, y))
-        y += im.height
-
-    return combined

@@ -7,7 +7,7 @@ from typing import Tuple, Union
 
 from PIL import Image
 
-# from qwen_vl_utils.vision_process import smart_resize
+from qwen_vl_utils.vision_process import smart_resize
 
 try:
     from importlib import metadata
